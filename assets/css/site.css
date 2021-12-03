@@ -1,0 +1,44 @@
+body {
+    background-color: #caf0f8;
+}
+
+
+header {
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Staatliches', cursive; ;
+    font-size:xx-large;
+    text-align: center;
+    color: white;
+    background-color: #00B4D8;
+    height: 50px;
+}
+
+#form-parent {
+    margin-top: 30px;
+}
+
+.restaurant-input {
+    margin: 10px;
+    padding: 10px;
+    background-color: #00B4D8;
+    height: 200px;
+    width: 200px;
+}
+
+label {
+    border: none;
+}
+#pizza {
+   width: 100%;
+   display: block;
+   overflow: hidden;
+    margin-top: 22px;
+}
+
+@media screen and (min-width: 1000px) {
+    #pizza {
+        height: 250px;
+
+    }
+}

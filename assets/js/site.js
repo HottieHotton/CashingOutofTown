@@ -42,6 +42,12 @@ function billPay (percentage) {
 
 }
 
+//Use other API to pull resturant reviews and display
+
+
+//User enters amount and selects tip rate, then display totals
+
+
 
 
 

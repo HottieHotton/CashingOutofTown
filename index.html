@@ -15,8 +15,10 @@
 </head>
 
 <body>
-  <header class="d-flex align-items-left">
-    Cashing Out of Town
+  <header> 
+    <h1 class="d-flex align-items-left"></h1>
+    Cashing Out of Town</h1>
+    <a href="#click-here"><h2 class="tip-text d-flex justify-content-flex-end">Don't know how much to tip? We have you covered! click here!</h2></a>
   </header>
 
   <!--Maps-->
@@ -25,15 +27,15 @@
         <!--this is the search form section-->
         <div class="form-group col-lg-4 col-md-4 col-sm-6 col-6">
             <form>
-                <h2>Enter city below</h2>
-                <input placeholder="Enter City Here" class="form-control" type="text" />
-                <input class="form-control" type="submit" />
+                <h2>Find A Restaurant Near You!</h2>
+                <input id="cityInfo" placeholder="Enter City Here" class="form-control" type="text" />
+                <input id="citySearch" class="form-control" type="submit" />
             </form>
             <img id="pizza" src="./assets/images/pexels-daria-shevtsova-1260968.jpg" />
         </div>
         <!--restaurant data results-->
         
-        <div class="col-sm-12 col-md-8 col-lg-8 d-flex flex-wrap">
+        <div id="parentRestaurant" class="col-sm-12 col-md-8 col-lg-8 d-flex flex-wrap">
             <div class="restaurant-input"></div>
             <div class="restaurant-input"></div>
             <div class="restaurant-input"></div>
@@ -45,7 +47,7 @@
     </div>
 </section>
 <!--This will hold the calculator part-->
-<section class="container">
+<section id="click-here" class="container">
     <div class="row">
         <div class="col col-3 d-flex align-items-center">
             <input placeholder="Enter bill amount here" id = "bill" class="form-control" type="text" />

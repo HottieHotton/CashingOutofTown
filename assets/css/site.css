@@ -8,10 +8,20 @@ header {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Staatliches', cursive; ;
     font-size:xx-large;
-    text-align: center;
     color: white;
     background-color: #00B4D8;
-    height: 50px;
+    height: 75px;
+}
+
+.tip-text {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Staatliches', cursive; ;
+    color: white;
+    font-size: large;
+
 }
 
 #form-parent {
@@ -30,10 +40,17 @@ label {
     border: none;
 }
 #pizza {
-   width: 100%;
    display: block;
+    height: 100%;
+   width: 75%;
    overflow: hidden;
-    margin-top: 22px;
+    margin: 22px auto;
+}
+
+#click-here {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: #00B4D8 solid 3px;
 }
 
 @media screen and (min-width: 1000px) {

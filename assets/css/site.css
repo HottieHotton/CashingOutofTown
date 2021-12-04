@@ -8,10 +8,22 @@ header {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Staatliches', cursive; ;
     font-size:xx-large;
-    text-align: center;
     color: white;
     background-color: #00B4D8;
-    height: 50px;
+    height: 75px;
+    padding: 0 0 0 5px;
+}
+
+.tip-text {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Staatliches', cursive; ;
+    color: white;
+    font-size: large;
+    padding: 0 5px 0 0;
+
 }
 
 #form-parent {
@@ -21,7 +33,7 @@ header {
 .restaurant-input {
     margin: 10px;
     padding: 10px;
-    background-color: #00B4D8;
+    border: #00B4D8 solid 3px;
     height: 200px;
     width: 200px;
 }
@@ -30,15 +42,18 @@ label {
     border: none;
 }
 #pizza {
-   width: 100%;
    display: block;
+   width: 75%;
    overflow: hidden;
-    margin-top: 22px;
+    margin: 22px auto;
 }
 
-@media screen and (min-width: 1000px) {
-    #pizza {
-        height: 250px;
+#click-here {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: #00B4D8 solid 3px;
+}
 
-    }
+#eighteen, #twenty, #twentytwo, #twentyfive {
+    background-color: #03045e;
 }

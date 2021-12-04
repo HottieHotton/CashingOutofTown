@@ -1,4 +1,34 @@
-//User enters location, then clicks submit
+//fetch yelp reviews api function
+//go to below website and click on Request Temporary Access to the Demo Server
+//https://cors-anywhere.herokuapp.com/corsdemo
+
+fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=SLC', {
+	headers: {
+		Authorization: 'Bearer iItktBsxYkzzhst_ex3Jy2ApvNQLCXID9Ds2X1UKIsWa00_aY0r5gS15lRC1FIkrTzrj0YaCLF_bNmdyOLzyNyhW8kZ_m_45XXrTs-Fh198hoL8HeNemfpGERsCrYXYx'
+	}
+})
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (data) {
+		console.log(data);
+	});
+
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/XRBRYD_9XzearlQWBOB-EQ', {
+	headers: {
+		Authorization: 'Bearer iItktBsxYkzzhst_ex3Jy2ApvNQLCXID9Ds2X1UKIsWa00_aY0r5gS15lRC1FIkrTzrj0YaCLF_bNmdyOLzyNyhW8kZ_m_45XXrTs-Fh198hoL8HeNemfpGERsCrYXYx'
+	}
+})
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (data) {
+		console.log(data);
+	});
+
+
+
+    //User enters location, then clicks submit
 var citySearchBtn = document.querySelector("#citySearch");
 citySearchBtn.addEventListener("click", function (event) {
     event.preventDefault();

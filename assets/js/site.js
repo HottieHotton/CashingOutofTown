@@ -13,13 +13,15 @@ citySearchBtn.addEventListener("click", function (event) {
             var lat = data.resourceSets[0].resources[0].geocodePoints[0].coordinates[0];
             var long = data.resourceSets[0].resources[0].geocodePoints[0].coordinates[1];
             console.log(lat, long);
+
+            //after lat and long fetch, fetch for restaurants
             getRestaurantData(lat, long);
         });
 
 })
 
 var getRestaurantData = function (lat, long) {
-    var requestUrl = "http://spatial.virtualearth.net/REST/v1/data/Microsoft/PointsOfInterest?spatialFilter=nearby(" + lat + "," + long + ",5)&$format=json&$filter=EntityTypeID%20eq%20'5800'&$select=EntityID,DisplayName,Latitude,Longitude,__Distance&$top=6&key=AovCYtswu4CycKE80Kb5y7hirY12vuOXsl8AJu3sC9jUZtLOuoZQtIoWh7q2ujoi";
+    var requestUrl = "http://spatial.virtualearth.net/REST/v1/data/Microsoft/PointsOfInterest?spatialFilter=nearby(" + lat + "," + long + ",5)&$format=json&$filter=EntityTypeID%20eq%20'5800'&$select=EntityID,DisplayName,Latitude,Longitude,__Distance&$top=9&key=AovCYtswu4CycKE80Kb5y7hirY12vuOXsl8AJu3sC9jUZtLOuoZQtIoWh7q2ujoi";
     fetch(requestUrl).then(function (response) {
         return response.json();
     })
@@ -34,15 +36,52 @@ var getRestaurantData = function (lat, long) {
 
             for (var i = 0; i < data.d.results.length; i++) {
                 var childRestaurantEl = document.createElement("div")
+                childRestaurantEl.id = "restaurant" + i;
                 childRestaurantEl.classList.add("restaurant-input")
                 childRestaurantEl.textContent = data.d.results[i].DisplayName;
+                var restaurant = {
+                    mapid: childRestaurantEl.id,
+                    lat: data.d.results[i].Latitude,
+                    long: data.d.results[i].Longitude,
+                    name: data.d.results[i].DisplayName
+                }
+
+
+                //append restaurants to html
                 parentRestaurantEl.appendChild(childRestaurantEl);
+                createMap(restaurant);
             }
         })
 }
 
-//after lat and long fetch, fetch for restaurants
-//append restaurants to html
+var createMap = function (restaurant) {
+    L.mapquest.key = 'dnL1ogrkx7x6IEM7j4dU0x6yTmQx050w';
+    var map = L.mapquest.map(restaurant.mapid, {
+        center: [restaurant.lat, restaurant.long],
+        layers: L.mapquest.tileLayer("map"),
+        zoom: 15
+    })
+
+    L.marker([restaurant.lat, restaurant.long], {
+        icon: L.mapquest.icons.marker(),
+        draggable: false,
+
+    }).addTo(map)
+
+    L.mapquest.textMarker([restaurant.lat, restaurant.long], {
+        text: restaurant.name,
+        position: "bottom",
+        type: "marker",
+        icon: {
+            primaryColor: "#03045e",
+            secondaryColor: "#03045e",
+            size: "sm"
+        }
+    }).addTo(map)
+}
+
+
+
 
 var bill = document.getElementById("bill");
 var btn18 = document.querySelector("#eighteen");

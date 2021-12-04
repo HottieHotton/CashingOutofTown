@@ -7,68 +7,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS only -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
   <link rel="stylesheet" href="./assets/css/site.css">
   <title>Document</title>
 </head>
 
 <body>
-  <header> 
+  <header>
     <h1 class="d-flex align-items-left"></h1>
     Cashing Out of Town</h1>
-    <a href="#click-here"><h2 class="tip-text d-flex justify-content-flex-end">Don't know how much to tip? We have you covered! click here!</h2></a>
+    <a href="#click-here">
+      <h2 class="tip-text d-flex justify-content-flex-end">Don't know how much to tip? We have you covered! click here!
+      </h2>
+    </a>
   </header>
 
   <!--Maps-->
   <section id="form-parent" class="container">
     <div class="row">
-        <!--this is the search form section-->
-        <div class="form-group col-lg-4 col-md-4 col-sm-6 col-6">
-            <form>
-                <h2>Find A Restaurant Near You!</h2>
-                <input id="cityInfo" placeholder="Enter City Here" class="form-control" type="text" />
-                <input id="citySearch" class="form-control" type="submit" />
-            </form>
-            <img id="pizza" src="./assets/images/pexels-daria-shevtsova-1260968.jpg" />
-        </div>
-        <!--restaurant data results-->
+      <!--this is the search form section-->
+      <div class="form-group col-lg-4 col-md-4 col-sm-6 col-6">
+        <form>
+          <h2>Find A Restaurant Near You!</h2>
+          <input id="cityInfo" placeholder="Enter City Here" class="form-control" type="text" />
+          <input id="citySearch" class="form-control" type="submit" />
+        </form>
+        <img id="pizza" src="./assets/images/pexels-daria-shevtsova-1260968.jpg" />
+      </div>
+      <!--restaurant data results-->
+
+      <div id="parentRestaurant" class="col-sm-12 col-md-8 col-lg-8 d-flex flex-wrap">
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
+        <div class="restaurant-input"></div>
         
-        <div id="parentRestaurant" class="col-sm-12 col-md-8 col-lg-8 d-flex flex-wrap">
-            <div class="restaurant-input"></div>
-            <div class="restaurant-input"></div>
-            <div class="restaurant-input"></div>
-            <div class="restaurant-input"></div>
-            <div class="restaurant-input"></div>
-            <div class="restaurant-input"></div>
-        </div>
+      </div>
 
     </div>
-</section>
-<!--This will hold the calculator part-->
-<section id="click-here" class="container">
+  </section>
+  <!--This will hold the calculator part-->
+  <section id="click-here" class="container">
     <div class="row">
-        <div class="col col-3 d-flex align-items-center">
-            <input placeholder="Enter bill amount here" id = "bill" class="form-control" type="text" />
-        </div>
-    
-        <!--below are the tip bottons-->
-        <div class="col col-2 d-flex flex-column">
-            <button id="eighteen" class="btn btn-primary m-2">18%</button>
-            <button  id="twenty" class="btn btn-primary m-2">20%</button>
-            <button  id="twentytwo" class="btn btn-primary m-2">22%</button>
-            <button id="twentyfive" class="btn btn-primary m-2">25%</button>
-        </div>
-        <div class="col col-3 d-flex flex-column justify-content-center">
-            <input id="tip" class="form-control m-2" type="text" readonly />
-            <input id="total" class="form-control m-2" type="text" readonly />
-        </div>
-        <div class="col col-4">
-            <img src="https://via.placeholder.com/200">
-        </div>
+      <div class="col col-3 d-flex align-items-center">
+        <input placeholder="Enter bill amount here" id="bill" class="form-control" type="text" />
+      </div>
+
+      <!--below are the tip bottons-->
+      <div class="col col-2 d-flex flex-column">
+        <button id="eighteen" class="btn btn-primary m-2">18%</button>
+        <button id="twenty" class="btn btn-primary m-2">20%</button>
+        <button id="twentytwo" class="btn btn-primary m-2">22%</button>
+        <button id="twentyfive" class="btn btn-primary m-2">25%</button>
+      </div>
+      <div class="col col-3 d-flex flex-column justify-content-center">
+        <input id="tip" class="form-control m-2" type="text" readonly />
+        <input id="total" class="form-control m-2" type="text" readonly />
+      </div>
+      <div class="col col-4">
+        <img src="https://via.placeholder.com/200">
+      </div>
     </div>
-</section>
+  </section>
 
   <script src="./assets/js/site.js"></script>
 </body>

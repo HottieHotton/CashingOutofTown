@@ -11,6 +11,7 @@ header {
     color: white;
     background-color: #00B4D8;
     height: 75px;
+    padding: 0 0 0 5px;
 }
 
 .tip-text {
@@ -21,6 +22,7 @@ header {
     font-family: 'Staatliches', cursive; ;
     color: white;
     font-size: large;
+    padding: 0 5px 0 0;
 
 }
 
@@ -31,7 +33,7 @@ header {
 .restaurant-input {
     margin: 10px;
     padding: 10px;
-    background-color: #00B4D8;
+    border: #00B4D8 solid 3px;
     height: 200px;
     width: 200px;
 }
@@ -41,7 +43,6 @@ label {
 }
 #pizza {
    display: block;
-    height: 100%;
    width: 75%;
    overflow: hidden;
     margin: 22px auto;
@@ -53,9 +54,6 @@ label {
     border-top: #00B4D8 solid 3px;
 }
 
-@media screen and (min-width: 1000px) {
-    #pizza {
-        height: 250px;
-
-    }
+#eighteen, #twenty, #twentytwo, #twentyfive {
+    background-color: #03045e;
 }

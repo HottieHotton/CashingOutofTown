@@ -57,3 +57,12 @@ label {
 #eighteen, #twenty, #twentytwo, #twentyfive {
     background-color: #03045e;
 }
+
+footer {
+    text-align-last: right;
+}
+
+.Logo {
+    width: 6%;
+    height: 6%;
+}

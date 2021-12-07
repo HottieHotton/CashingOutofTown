@@ -77,20 +77,3 @@ footer h6 {
     margin: 0;
 }
 
-@media screen and (min-width: 320px) {
-    body {
-        max-width: 320px;
-    }
-}
-
-@media screen and (max-width: 786px) {
-    body {
-        max-width: 786;
-    }
-}
-
-@media screen and (max-width: 1281px) {
-    body {
-        max-width: 1281px;
-    }
-}

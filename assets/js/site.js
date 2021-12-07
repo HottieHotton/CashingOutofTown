@@ -21,7 +21,7 @@ citySearchBtn.addEventListener("click", function (event) {
 })
 
 var getRestaurantData = function (lat, long) {
-    var requestUrl = "http://spatial.virtualearth.net/REST/v1/data/Microsoft/PointsOfInterest?spatialFilter=nearby(" + lat + "," + long + ",5)&$format=json&$filter=EntityTypeID%20eq%20'5800'&$select=EntityID,DisplayName,Latitude,Longitude,__Distance&$top=9&key=AovCYtswu4CycKE80Kb5y7hirY12vuOXsl8AJu3sC9jUZtLOuoZQtIoWh7q2ujoi";
+    var requestUrl = "https://spatial.virtualearth.net/REST/v1/data/Microsoft/PointsOfInterest?spatialFilter=nearby(" + lat + "," + long + ",5)&$format=json&$filter=EntityTypeID%20eq%20'5800'&$select=EntityID,DisplayName,Latitude,Longitude,__Distance&$top=9&key=AovCYtswu4CycKE80Kb5y7hirY12vuOXsl8AJu3sC9jUZtLOuoZQtIoWh7q2ujoi";
     fetch(requestUrl).then(function (response) {
         return response.json();
     })

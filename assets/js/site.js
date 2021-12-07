@@ -14,7 +14,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/se
 		console.log(data);
 	});
 
-    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/XRBRYD_9XzearlQWBOB-EQ', {
+    fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=subway&latitude=40.660316467285156&longitude=-111.5094985961914', {
 	headers: {
 		Authorization: 'Bearer iItktBsxYkzzhst_ex3Jy2ApvNQLCXID9Ds2X1UKIsWa00_aY0r5gS15lRC1FIkrTzrj0YaCLF_bNmdyOLzyNyhW8kZ_m_45XXrTs-Fh198hoL8HeNemfpGERsCrYXYx'
 	}

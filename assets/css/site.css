@@ -59,10 +59,16 @@ label {
 }
 
 footer {
+    background-color: #00B4D8;
     text-align-last: right;
 }
 
 .Logo {
+       margin-right: 10px;
     width: 6%;
     height: 6%;
+}
+
+.Logo-text {
+    margin-right: 20px;
 }

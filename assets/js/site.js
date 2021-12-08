@@ -1,8 +1,9 @@
 //User enters location, then clicks submit
 var citySearchBtn = document.querySelector("#citySearch");
-citySearchBtn.addEventListener("click", function (event) {
-    event.preventDefault();
-    var cityInput = document.querySelector("#cityInfo").value;
+var search = function (cityInput) {
+    
+    
+    window.localStorage.setItem("lastCity", cityInput);
     var fetchLatLongUrl = "https://dev.virtualearth.net/REST/v1/Locations/US/" + cityInput + "/?key=AovCYtswu4CycKE80Kb5y7hirY12vuOXsl8AJu3sC9jUZtLOuoZQtIoWh7q2ujoi";
     //after click fetch for the city lat and long
     fetch(fetchLatLongUrl).then(function (response) {
@@ -18,7 +19,12 @@ citySearchBtn.addEventListener("click", function (event) {
             getRestaurantData(lat, long);
         });
 
-})
+    }
+citySearchBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    var cityInput = document.querySelector("#cityInfo").value;
+    search(cityInput);
+});
 
 var getRestaurantData = function (lat, long) {
     var requestUrl = "https://spatial.virtualearth.net/REST/v1/data/Microsoft/PointsOfInterest?spatialFilter=nearby(" + lat + "," + long + ",5)&$format=json&$filter=EntityTypeID%20eq%20'5800'&$select=EntityID,DisplayName,Latitude,Longitude,__Distance&$top=9&key=AovCYtswu4CycKE80Kb5y7hirY12vuOXsl8AJu3sC9jUZtLOuoZQtIoWh7q2ujoi";
@@ -133,3 +139,8 @@ function billPay(percentage) {
 }
 
 //Use other API to pull resturant reviews and display
+
+var lastCity = window.localStorage.getItem("lastCity");
+if (lastCity) {
+    search (lastCity);
+}

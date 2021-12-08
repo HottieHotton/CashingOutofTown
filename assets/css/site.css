@@ -86,3 +86,12 @@ footer h6 {
         text-align:center;
     }
 }
+
+#cityInfo {
+    margin-bottom: 5px;
+}
+
+#citySearch {
+    background-color: #03045e;
+    color: white;
+}

@@ -10,8 +10,7 @@ header {
     font-size:xx-large;
     color: white;
     background-color: #00B4D8;
-    height: 75px;
-    padding: 0 0 0 5px;
+   padding: 0 0 0 5px;
 }
 
 .tip-text {
@@ -77,3 +76,9 @@ footer h6 {
     margin: 0;
 }
 
+@media screen and (max-width:375px) {
+   header {
+       
+       text-align: center;
+   } 
+}

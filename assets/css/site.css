@@ -45,6 +45,8 @@ label {
    width: 75%;
    overflow: hidden;
     margin: 22px auto;
+    padding: 5px;
+    border:#03045e solid 5px;
 }
 
 #click-here {
@@ -77,6 +79,8 @@ footer h6 {
 }
 
 .tipImage{
+    padding: 5px;
+    border:#03045e solid 5px;
     height: 200px;
     width: 300px;
 }

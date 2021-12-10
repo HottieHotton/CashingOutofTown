@@ -55,6 +55,10 @@ label {
     border-top: #00B4D8 solid 3px;
 }
 
+#amount{
+    justify-content: center;
+}
+
 #eighteen, #twenty, #twentytwo, #twentyfive {
     background-color: #03045e;
 }
@@ -98,4 +102,15 @@ footer h6 {
 #citySearch {
     background-color: #03045e;
     color: white;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }

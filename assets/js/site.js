@@ -10,10 +10,8 @@ var search = function (cityInput) {
         return response.json();
     })
         .then(function (data) {
-            console.log(data);
             var lat = data.resourceSets[0].resources[0].geocodePoints[0].coordinates[0];
             var long = data.resourceSets[0].resources[0].geocodePoints[0].coordinates[1];
-            console.log(lat, long);
 
             //after lat and long fetch, fetch for restaurants
             getRestaurantData(lat, long);
@@ -32,7 +30,6 @@ var getRestaurantData = function (lat, long) {
         return response.json();
     })
         .then(function (data) {
-            console.log(data)
             var parentRestaurantEl = document.querySelector("#parentRestaurant");
 
             //remove any previous search results

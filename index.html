@@ -64,9 +64,9 @@
   <!--This will hold the calculator part-->
   <section id="click-here" class="container">
     <div class="row">
-      <div class=" col-lg-3 d-flex align-items-center flex-column">
+      <div id = "amount" class=" col-lg-3 d-flex align-items-center flex-column">
         <h6> Finished eating? We can help calculate your server's tip.</h6>
-        <input placeholder="Enter bill amount here" id="bill" class="form-control" type="text" />
+        <input placeholder="Enter bill amount here" id="bill" class="form-control" type="number" step = "any" onkeydown="javascript: return event.keyCode == 69 ? false : true"/>
       </div>
 
       <!--below are the tip buttons-->
@@ -91,7 +91,11 @@
   <br>
   <br>
   <footer>
-    <img class="Logo" src="./assets/images/Logo.png"></img><h6>Powered By BBBK</h6>
+    <img class="Logo" src="./assets/images/Logo.png"></img>
+    <h6>Powered By:</h6>
+    <h6>BBBK</h6>
+    <h6>Bing</h6>
+    <h6>MapQuest</h6>
     </footer>
 
   <script src="./assets/js/site.js"></script>

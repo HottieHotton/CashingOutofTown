@@ -119,23 +119,21 @@ var percentage = 0;
 
 //User enters amount and selects tip rate, then display totals
 function billPay(percentage) {
+    //Checks input to see if there's anything
+    if(!bill.value){
+    tip.value = "Please enter a bill amount!";
+    total.value = "Please enter a bill amount!";
+    bill.focus();
+    return;
+    }
     var num = bill.value;
     var tipTotal = num * percentage;
     var finalTotal = num;
     var interger = parseInt(finalTotal);
-    console.log(interger);
 
     finalTotal = interger + tipTotal
     tip.value = "$" + tipTotal.toFixed(2);
-    console.log(finalTotal)
-    console.log(num)
-    console.log(tipTotal)
-    total.value = "$" + finalTotal;
-
-
-    console.log(percentage);
-    console.log(bill.value);
-
+    total.value = "$" + finalTotal.toFixed(2);
 }
 
 //Use other API to pull resturant reviews and display

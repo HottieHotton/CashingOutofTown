@@ -10,8 +10,7 @@ header {
     font-size:xx-large;
     color: white;
     background-color: #00B4D8;
-    height: 75px;
-    padding: 0 0 0 5px;
+   padding: 0 0 0 5px;
 }
 
 .tip-text {
@@ -46,6 +45,8 @@ label {
    width: 75%;
    overflow: hidden;
     margin: 22px auto;
+    padding: 5px;
+    border:#03045e solid 5px;
 }
 
 #click-here {
@@ -54,6 +55,62 @@ label {
     border-top: #00B4D8 solid 3px;
 }
 
+#amount{
+    justify-content: center;
+}
+
 #eighteen, #twenty, #twentytwo, #twentyfive {
     background-color: #03045e;
+}
+
+.Logo {
+    width: 6%;
+    height: 6%;
+}
+
+footer {
+    background: #00B4D8;
+    text-align-last: right;
+    width: 100%;
+    padding: 40px 35px;
+}
+
+footer h6 {
+    display: inline;
+    color: white;
+    font-size: small;
+    margin: 0;
+}
+
+.tipImage{
+    padding: 5px;
+    border:#03045e solid 5px;
+    height: 200px;
+    width: 300px;
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        text-align:center;
+    }
+}
+
+#cityInfo {
+    margin-bottom: 5px;
+}
+
+#citySearch {
+    background-color: #03045e;
+    color: white;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }

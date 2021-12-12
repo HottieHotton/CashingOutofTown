@@ -2,7 +2,7 @@
 var citySearchBtn = document.querySelector("#citySearch");
 var search = function (cityInput) {
     
-    
+    document.querySelector("#lastCity").textContent=cityInput;
     window.localStorage.setItem("lastCity", cityInput);
     var fetchLatLongUrl = "https://dev.virtualearth.net/REST/v1/Locations/US/" + cityInput + "/?key=AovCYtswu4CycKE80Kb5y7hirY12vuOXsl8AJu3sC9jUZtLOuoZQtIoWh7q2ujoi";
     //after click fetch for the city lat and long
@@ -20,8 +20,9 @@ var search = function (cityInput) {
     }
 citySearchBtn.addEventListener("click", function(event){
     event.preventDefault();
-    var cityInput = document.querySelector("#cityInfo").value;
-    search(cityInput);
+    var cityInput = document.querySelector("#cityInfo");
+    search(cityInput.value);
+    cityInput.value="";
 });
 
 var getRestaurantData = function (lat, long) {

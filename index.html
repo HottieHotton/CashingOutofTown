@@ -14,12 +14,12 @@
   <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
   <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
   <link rel="stylesheet" href="./assets/css/site.css">
-  <link rel="shortcut icon" type="image/png" href="./assets/images/Logo.png"/>
-    <style>
-        .img-container{
-            text-align: center;
-        }
-    </style>
+  <link rel="shortcut icon" type="image/png" href="./assets/images/Logo.png" />
+  <style>
+    .img-container {
+      text-align: center;
+    }
+  </style>
   <title>Cashing Out Of Town!</title>
 </head>
 
@@ -47,26 +47,29 @@
       </div>
       <!--restaurant data results-->
 
-      <div id="parentRestaurant" class="col-sm-12 col-md-8 col-lg-8 d-flex flex-wrap justify-content-center">
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        <div class="restaurant-input"></div>
-        
+      <div class="col-sm-12 col-md-8 col-lg-8 text-center">
+        <h2 id="lastCity" class="mt-2">Last City Searched</h2>
+        <div id="parentRestaurant" class="d-flex flex-wrap text-center justify-content-center">
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+          <div class="restaurant-input"></div>
+        </div>
       </div>
     </div>
   </section>
   <!--This will hold the calculator part-->
   <section id="click-here" class="container">
     <div class="row">
-      <div id = "amount" class=" col-lg-3 d-flex align-items-center flex-column">
+      <div id="amount" class=" col-lg-3 d-flex align-items-center flex-column">
         <h6> Finished eating? We can help calculate your server's tip.</h6>
-        <input placeholder="Enter bill amount here" id="bill" class="form-control" type="number" step = "any" onkeydown="javascript: return event.keyCode == 69 ? false : true"/>
+        <input placeholder="Enter bill amount here" id="bill" class="form-control" type="number" step="any"
+          onkeydown="javascript: return event.keyCode == 69 ? false : true" />
       </div>
 
       <!--below are the tip buttons-->
@@ -83,20 +86,27 @@
         <h6>Total with tip included</h6>
         <input id="total" class="form-control m-2" type="text" readonly />
       </div>
-      <div class=" col-lg-4">
-        <img class ="tipImage" src="assets\images\image.png">
+      <div class=" col-lg-4 d-flex justify-content-center">
+        <img class="tipImage" src="assets\images\image.png">
       </div>
     </div>
   </section>
   <br>
   <br>
-  <footer>
-    <img class="Logo" src="./assets/images/Logo.png"></img>
-    <h6>Powered By:</h6>
-    <h6>BBBK</h6>
-    <h6>Bing</h6>
-    <h6>MapQuest</h6>
-    </footer>
+  <footer class="container-fluid">
+    <div class="row justify-content-end">
+
+      <div class="col-lg-2 col-md-6 col-sm-12 d-flex justify-content-md-end justify-content-center"><img class="Logo"
+          src="./assets/images/Logo.png"></img>
+      </div>
+      <div class="col-lg-1 col-md-2 d-flex flex-column justify-content-center align-items-center">
+        <h6>Powered By:</h6>
+        <h6>BBBK</h6>
+        <h6>Bing Maps</h6>
+        <h6>MapQuest</h6>
+      </div>
+    </div>
+  </footer>
 
   <script src="./assets/js/site.js"></script>
 </body>
